@@ -1,13 +1,14 @@
 {
   "files": {
-    "main.css": "/static/css/main.e6c13ad2.css",
-    "main.js": "/static/js/main.beb9723e.js",
+    "main.css": "/static/css/main.dbd298a9.css",
+    "main.js": "/static/js/main.84083599.js",
+    "static/media/LogoYoungInfolife.png": "/static/media/LogoYoungInfolife.349f6e7b8c650cd94485.png",
     "index.html": "/index.html",
-    "main.e6c13ad2.css.map": "/static/css/main.e6c13ad2.css.map",
-    "main.beb9723e.js.map": "/static/js/main.beb9723e.js.map"
+    "main.dbd298a9.css.map": "/static/css/main.dbd298a9.css.map",
+    "main.84083599.js.map": "/static/js/main.84083599.js.map"
   },
   "entrypoints": [
-    "static/css/main.e6c13ad2.css",
-    "static/js/main.beb9723e.js"
+    "static/css/main.dbd298a9.css",
+    "static/js/main.84083599.js"
   ]
 }
