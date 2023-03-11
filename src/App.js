@@ -1,15 +1,13 @@
-import { Routes, Route } from "react-router-dom";
-import Login from "./Login";
-import Navbar from "./Navbar";
-import ButtonAppBar from "./Navbar";
+import {Route, Routes} from "react-router-dom";
 import HomePage from "./Homepage";
+import Contacts from "./Contacts";
 
 const App = () => {
     return (
         <>
             <Routes>
-                <Route path="/" element={<HomePage />}></Route>
-                <Route path="/login" element={<Login />}></Route>
+                <Route path="/" element={<HomePage/>}></Route>
+                <Route path="/contacts" element={<Contacts/>}></Route>
             </Routes>
         </>
     );

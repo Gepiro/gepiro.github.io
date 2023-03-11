@@ -13,6 +13,7 @@ import logo from "./LogoYoungInfolife.png"
 import './Navbar.css';
 import {Grid, Link} from "@mui/material";
 import {useNavigate} from "react-router-dom";
+import {useState} from "react";
 
 const pages = ['Home', 'La nostra squadra', 'Contatti'];
 
@@ -24,8 +25,21 @@ function Navbar() {
         setAnchorElNav(event.currentTarget);
     };
 
-    const handleCloseNavMenu = () => {
-        navigate('/login')
+    const handleCloseNavMenu = (index) => {
+        console.log(index)
+        switch (index){
+            case 0:
+                navigate('/')
+                break
+            case 1:
+                navigate('/team')
+                break
+            case 2:
+                navigate('/contacts')
+                break
+            default:
+                console.log("Error")
+        }
         setAnchorElNav(null);
     };
 
@@ -63,8 +77,8 @@ function Navbar() {
                                 display: {xs: 'block', md: 'none'},
                             }}
                         >
-                            {pages.map((page) => (
-                                <MenuItem key={page} onClick={handleCloseNavMenu}>
+                            {pages.map((page, index) => (
+                                <MenuItem key={page} onClick={() => {handleCloseNavMenu(index)}}>
                                     <Typography textAlign="center">{page}</Typography>
                                 </MenuItem>
                             ))}
@@ -85,10 +99,10 @@ function Navbar() {
                     </Grid>
                     <Box sx={{ flexGrow: 1 , display: {xs: 'none', md: 'flex'}}} />
                     <Box sx={{display: {xs: 'none', md: 'flex'}}}>
-                        {pages.map((page) => (
+                        {pages.map((page, index) => (
                             <Button
                                 key={page}
-                                onClick={handleCloseNavMenu}
+                                onClick={() => {handleCloseNavMenu(index)}}
                                 sx={{my: 2, color: 'black', display: 'block'}}
                             >
                                 {page}
